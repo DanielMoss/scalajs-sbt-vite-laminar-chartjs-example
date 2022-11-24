@@ -22,11 +22,11 @@ jobs:
       id: bundle-js
       #if: steps.identify-changes.outputs.sources == 'true'
       run: |
+        npm install
         sbt test
         echo "test1"
         echo "test2"
         sbt --error --batch "print publicProd"
         echo "test3"
         echo "test4"
-        npm install
         npm run build
