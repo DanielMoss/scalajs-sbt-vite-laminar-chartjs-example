@@ -29,6 +29,11 @@ const replacementForPublic = isDev()
   ? printSbtTask("publicDev")
   : printSbtTask("publicProd");
 
+console.log(`String: ${replacementForPublic}`)
+console.log(`Length: ${replacementForPublic.length}`)
+console.log(`Array: ${replacementForPublic.split('')}`)
+console.log(`Codes: ${replacementForPublic.split('').map(x => x.charCodeAt(0))}`)
+
 export default defineConfig({
   resolve: {
     alias: [
